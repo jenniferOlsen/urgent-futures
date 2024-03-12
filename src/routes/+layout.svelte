@@ -1,5 +1,13 @@
+<script>
+  import { challenge, community } from './stores.js';
+</script>
+
 <header>
-  <h1>Urgent Futures</h1>
+  <!-- {#if challenge !== '' && community !== ''}
+    <h1>{$challenge} in {$community}</h1>
+  {:else} -->
+    <h1>Urgent Futures</h1>
+  <!-- {/if} -->
 </header>
 <main class="container">
   <slot />
