@@ -6,12 +6,22 @@
 
 <div class="form">
   <div class="form-group">
-    <label for="challenge">Choose your challenge</label>
+    <label for="challenge">Choose your challenge 
+      <span data-placement="right" data-tooltip="Pick any urgent challenge you feel strongly about">
+        <i class="ri-information-line" />
+      </span>
+    </label>
     <input type="text" bind:value={$challenge} name="challenge" id="challenge" placeholder="climate change, econmic inequality, racial injustice, brittle supply chains..." />
   </div>
   <div class="form-group">
-    <label for="community">Choose a community</label>
+    <label for="community">Choose a community
+      <span data-placement="right" data-tooltip="Pick a specific community that you're a part of">
+        <i class="ri-information-line" />
+      </span>
+    </label>
     <input bind:value={$community} type="text" name="community" id="community" placeholder="my town, my neighborhood, my country, my workplace..."/>
   </div>
-  <a class="button" href="/calling">Find your future truth</a>
+  {#if $challenge && $community}
+    <a class="button" href="/calling">Find your future truth</a>
+  {/if}
 </div>
