@@ -2,7 +2,20 @@
   import { challenge, community } from '$lib/stores.js';
 </script>
 
-<p>Long instructions will go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<blockquote>
+  The truest truth of the future is personal. It's whatever we feel deep in our bones that we really want to be different, whatever we really <em>need</em> to be different...It's whatever we are willing to spend not just a week, or a month, or a year, but a whole decade of our lives trying to make different.
+  <footer>&mdash;Jane McGonigal, <cite>Imaginable</cite> (2023), pg. 230</footer>
+</blockquote>
+
+<p>How can you discover your own future truth? This is a framework for understanding how you relate to different future challenges, and for exploring where you may have the most powerful opportunity to make change.</p>
+
+<p>Start by choosing a future challenge to focus on. This should be a <em>big</em> problem that you feel strongly about. Next, choose a community that you're a part of and that is affected by the challenge. Once you have a challenge and community, we'll ask you four questions. The answers will measure:</p>
+  <ol>
+    <li>Your calling to the future</li>
+    <li>Your belonging to the future</li>
+    <li>Your hope for the future</li>
+    <li>Your power to shape the future</li>
+  </ol>
 
 <div class="form">
   <div class="form-group">

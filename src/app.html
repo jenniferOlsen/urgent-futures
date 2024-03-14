@@ -26,13 +26,15 @@
 		--pico-tooltip-background-color: var(--pico-secondary-background);
 	}
 	.form {
-    padding-top: var(--pico-typography-spacing-vertical);
-		padding-bottom: var(--pico-typography-spacing-vertical);
+    padding: var(--pico-spacing);
 		display: flex;
 		flex-direction: column;
+		border: var(--pico-border-width) solid var(--pico-primary-border);
+		border-radius: var(--pico-border-radius);
+		margin-bottom: var(--pico-spacing);
   }
 	.form-group {
-		margin-bottom: calc(var(--pico-spacing) * 2);
+		margin-bottom: var(--pico-spacing);
 	}
 	.button {
 		--pico-box-shadow: var(--pico-button-box-shadow, 0 0 0 rgba(0, 0, 0, 0));
