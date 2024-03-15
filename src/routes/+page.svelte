@@ -2,6 +2,10 @@
   import { challenge, community } from '$lib/stores.js';
 </script>
 
+<svelte:head>
+  <title>Urgent Futures</title>
+</svelte:head>
+
 <blockquote>
   The truest truth of the future is personal. It's whatever we feel deep in our bones that we really want to be different, whatever we really <em>need</em> to be different...It's whatever we are willing to spend not just a week, or a month, or a year, but a whole decade of our lives trying to make different.
   <footer>&mdash;Jane McGonigal, <cite>Imaginable</cite> (2023), pg. 230</footer>
