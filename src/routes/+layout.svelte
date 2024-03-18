@@ -29,5 +29,6 @@
   footer {
     text-align: center;
     margin-bottom: var(--pico-typography-spacing-vertical);
+    margin-top: var(--pico-typography-spacing-vertical);
   }
 </style>

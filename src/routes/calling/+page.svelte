@@ -1,6 +1,6 @@
 <script>
   import ChallengeCheck from "$lib/ChallengeCheck.svelte";
-  import { challenge, community } from "$lib/stores";
+  import { challenge, community, calling } from "$lib/stores";
 </script>
 
 <svelte:head>
@@ -8,5 +8,6 @@
 </svelte:head>
 
 <ChallengeCheck>    
-  <h2>Calling: Question 1</h2>
+  <h2 id="question">How urgent do you think it is to address {$challenge} in {$community}?</h2>
+  
 </ChallengeCheck>
