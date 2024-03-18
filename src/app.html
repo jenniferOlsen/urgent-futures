@@ -17,13 +17,19 @@
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover" class="uf">
-		<div style="display: contents">%sveltekit.body%</div>
+		<div class="wrapper">%sveltekit.body%</div>
 	</body>
 </html>
 
 <style>
 	.uf {
 		--pico-tooltip-background-color: var(--pico-secondary-background);
+		height: 100vh;
+	}
+	.wrapper {
+		min-height: 100%;
+		display: grid;
+		grid-template-rows: auto 1fr auto;
 	}
 	.form {
     padding: var(--pico-spacing);

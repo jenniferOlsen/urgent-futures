@@ -28,7 +28,8 @@
         <i class="ri-information-line" />
       </span>
     </label>
-    <input type="text" bind:value={$challenge} name="challenge" id="challenge" placeholder="climate change, econmic inequality, racial injustice, brittle supply chains..." />
+    <input type="text" bind:value={$challenge} name="challenge" id="challenge" aria-describedby="challenge-helper" />
+    <small id="challenge-helper">For example: climate change, econmic inequality, racial injustice, brittle supply chains, etc.</small>
   </div>
   <div class="form-group">
     <label for="community">Choose a community
@@ -36,7 +37,8 @@
         <i class="ri-information-line" />
       </span>
     </label>
-    <input bind:value={$community} type="text" name="community" id="community" placeholder="my town, my neighborhood, my country, my workplace..."/>
+    <input bind:value={$community} type="text" name="community" id="community" aria-describedby="community-helper" />
+    <small id="community-helper">For example: my city, my neighborhood, my country, my workplace, etc.</small>
   </div>
   {#if $challenge && $community}
     <a class="button" href="/calling">Find your future truth</a>
