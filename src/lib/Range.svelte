@@ -1,44 +1,45 @@
-<script>
-  import { belonging, calling, hope, power } from "$lib/stores";
+<script lang="ts">
+  import { belonging, calling, hope, power, showResults } from "$lib/stores";
   import { page } from '$app/stores';
 
-  let value = 0;
+
+  let value: import("svelte/store").Writable<number>;
   let helperText = '';
 
   switch ($page.url.pathname) {
     case '/calling':
-      value = $calling;
+      value = calling;
       helperText = 'urgency';
       break;
     case '/belonging':
-      value = $belonging;
+      value = belonging;
       helperText = 'agreement';
       break;
     case '/hope':
-      value = $hope;
+      value = hope;
       helperText = 'optimism';
       break;
     case '/power':
-      value = $power;  
+      value = power;  
       helperText = 'power';
       break;
   }
-
 </script>
+
 <div class="range">
   <span>1</span>
-  <input aria-labelledby="question" aria-describedby="range-helper" type="range" min="1" max="10" bind:value />
+  <input aria-labelledby="question" aria-describedby="range-helper" type="range" min="1" max="10" bind:value={$value} />
   <span>10</span>
 </div>
 <small id="range-helper">1 = low {helperText}, 10 = high {helperText}</small>
 
-{#if value > 0}
+{#if $value > 0}
   <div class="accept">
     <div>
       <span>{helperText} level:</span>
-      <input aria-labelledby="question" aria-describedby="range-helper" type="number" min="1" max="10" bind:value />
+      <input aria-labelledby="question" aria-describedby="range-helper" type="number" min="1" max="10" bind:value={$value} />
     </div>
-    <button>Accept</button>
+    <button on:click={() => showResults.set(true)}>Accept</button>
   </div>
 {/if}
 <style>
@@ -59,6 +60,7 @@
     justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
+    margin-bottom: 1rem;
     text-transform: capitalize;
   }
   .accept input {
