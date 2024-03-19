@@ -9,5 +9,4 @@
 
 <ChallengeCheck>    
   <h2 id="question">How urgent do you think it is to address {$challenge} in {$community}?</h2>
-  
 </ChallengeCheck>
