@@ -28,6 +28,7 @@
 <style>
   .button-group {
     margin-bottom: 1rem;
+    margin-top: 3rem;
   }
   .button-group .button {
     margin-right: 3rem;

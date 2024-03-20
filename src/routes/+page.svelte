@@ -1,4 +1,5 @@
 <script>
+  import { fade } from 'svelte/transition';
   import { challenge, community } from '$lib/stores.js';
 </script>
 
@@ -41,6 +42,6 @@
     <small id="community-helper">For example: my city, my neighborhood, my country, my workplace, etc.</small>
   </div>
   {#if $challenge && $community}
-    <a class="button" href="/calling">Find your future truth</a>
+    <a class="button" href="/calling" transition:fade>Find your future truth</a>
   {/if}
 </div>

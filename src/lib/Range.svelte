@@ -1,6 +1,7 @@
 <script lang="ts">
   import { belonging, calling, hope, power, showResults } from "$lib/stores";
   import { page } from '$app/stores';
+  import { scale } from "svelte/transition";
 
 
   let value: import("svelte/store").Writable<number>;
@@ -34,7 +35,7 @@
 <small id="range-helper">1 = low {helperText}, 10 = high {helperText}</small>
 
 {#if $value > 0}
-  <div class="accept">
+  <div class="accept" transition:scale>
     <div>
       <span>{helperText} level:</span>
       <input aria-labelledby="question" aria-describedby="range-helper" type="number" min="1" max="10" bind:value={$value} />
