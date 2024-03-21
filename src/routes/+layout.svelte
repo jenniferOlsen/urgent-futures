@@ -1,10 +1,11 @@
 <script>
   import { challenge, community } from '$lib/stores.js';
+  import { fade } from 'svelte/transition';
 </script>
 
 <header>
   {#if $challenge && $community}
-    <h1>{$challenge} in {$community}</h1>
+    <h1 transition:fade>{$challenge} in {$community}</h1>
   {:else}
     <h1>Urgent Futures</h1>
   {/if}
@@ -13,6 +14,7 @@
   <slot />
 </main>
 <footer class="container">
+  <hr />
   <small>Based on the Urgent Futures Questionaire from <a href="https://www.amazon.com/Imaginable-Create-Hopeful-Future_in-Community/dp/1954118333/"><em>Imaginable</em></a> by Jane McGonigal.</small>
 </footer>
 
