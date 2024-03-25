@@ -8,6 +8,11 @@ export const belonging = writable(0);
 export const hope = writable(0);
 export const power = writable(0);
 
+export const powerList = writable('');
+export const powerWants = writable('');
+export const powerPeople = writable('');
+export const powerUnique = writable('');
+
 export const showResults = writable(false);
 
 export function reset() {

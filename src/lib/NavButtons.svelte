@@ -14,7 +14,7 @@
     case '/hope':
       next = '/power';
       break;
-    case '/power':
+    default:
       next = '/final';
       break;
   }
