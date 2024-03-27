@@ -9,7 +9,7 @@
 
 <ChallengeCheck>    
   {#if $calling > 7} 
-    <p>Solving {$challenge} in {$community} is a something that you're passionate about. You rated it as {$calling} out of 10, so you see it as an urgent problem.</p>   
+    <p>Solving {$challenge} in {$community} is something that you're passionate about. You rated it as {$calling} out of 10, so you see it as an urgent problem.</p>   
   {:else}
     <p>It doesn't seem like you're really passionate about {$challenge} since you only rated it as {$calling} out of 10.</p>.
   {/if}

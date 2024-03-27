@@ -35,10 +35,10 @@
 <small id="range-helper">1 = low {helperText}, 10 = high {helperText}</small>
 
 {#if $value > 0}
-  <div class="accept" transition:scale>
+  <div class="accept" transition:scale role="region" aria-live="polite">
     <div>
-      <span>{helperText} level:</span>
-      <input aria-labelledby="question" aria-describedby="range-helper" type="number" min="1" max="10" bind:value={$value} />
+      <span id="current-level">{helperText} level:</span>
+      <input aria-labelledby="current-level" aria-describedby="range-helper" type="number" min="1" max="10" bind:value={$value} />
     </div>
     <button on:click={() => showResults.set(true)}>Accept</button>
   </div>

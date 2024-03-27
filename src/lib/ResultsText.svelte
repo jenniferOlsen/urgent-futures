@@ -4,7 +4,7 @@
   import { page } from '$app/stores';
 </script>
 
-<div transition:scale>
+<div transition:scale role="region" aria-live="polite">
   <slot />
   {#if $page.url.pathname !== '/power'}
     <NavButtons />

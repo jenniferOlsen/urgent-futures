@@ -1,6 +1,6 @@
 <script>
-  import { fade } from 'svelte/transition';
   import { challenge, community } from '$lib/stores.js';
+  import { goto } from '$app/navigation';
 </script>
 
 <svelte:head>
@@ -41,7 +41,5 @@
     <input bind:value={$community} type="text" name="community" id="community" aria-describedby="community-helper" />
     <small id="community-helper">For example: my city, my neighborhood, my country, my workplace, etc.</small>
   </div>
-  {#if $challenge && $community}
-    <a class="button" href="/calling" transition:fade>Find your future truth</a>
-  {/if}
+    <button on:click={() => goto('/calling')} disabled={!$challenge || !$community} aria-disabled={!$challenge || !$community}>Find your future truth</button>
 </div>
